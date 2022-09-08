@@ -1,0 +1,12 @@
+.parent .parent-1 h1{
+    color: blue;
+    border:1px solid red ;
+    width: 400;
+    background-color: black;
+}
+.parent .parent-1 h2{
+    color:violet ;
+    border:1px solid royalblue ;
+    width:400 ;
+    background-color: black;
+}

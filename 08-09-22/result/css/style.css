@@ -1,0 +1,15 @@
+h1{
+    color:rgb(22, 22, 53) ;
+}
+h2{
+    color:brown;
+}
+p{
+    color: blueviolet;
+}
+ul{
+    color: orangered;
+    border: 1px solid black;
+     width: 400px;
+     background-color:yellow ;
+}
