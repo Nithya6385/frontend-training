@@ -1,0 +1,21 @@
+h1{
+    color: red;
+    display: inline;
+    border: 2px solid blue;
+    margin:20px ;
+    padding: 10px;
+}
+h2{
+    color: blue;
+    display: inline;
+    border: 2px solid red;
+    margin: 20px;
+    padding: 10px;
+}
+li{
+    color: blue;
+    display: inline-block;
+    border: 1px solid red;
+    margin: 100px;
+    padding:20px;
+}
