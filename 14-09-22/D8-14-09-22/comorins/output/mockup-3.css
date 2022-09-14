@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gray;
+}
+h1{ 
+    color: beige;
+    text-align: center;
+    padding: 20px;
+
+}
+.main{
+    width: 90%;
+    margin: auto;
+}
+nav{
+    background-color: rgb(230, 32, 147);
+    width: 100%;
+    position: relative;
+}
+nav ul{
+    display: inline-block;
+    
+}
+nav ul li{
+    display: inline-block;
+    padding: 30px;  
+    margin-left: 60px;  
+}
+nav form{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+input{
+    width: 300px;
+    height: 30px;
+}
+button{
+    width:100px;
+    height: 30px;
+    color: aliceblue;
+    background-color: black;
+}
+.sub1{
+    background-color: aliceblue;
+    width: 70%;
+    padding: 27px;
+    display:inline-block;
+    margin: 5px 0;
+}
+p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+h2{
+    text-align: center;
+}
+.sub2{
+    background-color: rgb(230, 32, 147);
+    width: 25%;
+    padding-bottom: 314px;
+    padding-top: 30px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0;
+}
+.sub2 ul{
+    padding-left: 50px;
+}
+footer{
+    background-color: beige;
+    padding: 20px 0;
+
+}
