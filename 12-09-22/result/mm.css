@@ -1,0 +1,7 @@
+div{
+    min-width: 20%;
+    border: 2px solid red;
+    background-color: blue;
+    height: 600px;
+    width: 100%;
+}

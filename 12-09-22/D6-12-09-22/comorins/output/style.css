@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    border: 2px solid #333;
+    text-align: center;
+    background-color: #333;
+
+
+}
+header li{
+    display: inline-block;
+    margin: 10px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+/* sectiom1 */
+.section1{
+    margin-top: 20px;
+}
+p{
+    color: gray;
+}
+/* section2 */
+.section2{
+    width: 50%;
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+}
+input{
+    border: 1px solid lightgrey;
+    border-bottom: 4px solid #FAA61A;
+}
+button{
+    background-color: #FAA61A;
+    position:absolute ;
+    right: 0;
+    bottom: 0;
+    width: 15%;
+    height: 30px;
+    border: 1px solid lightgrey;
+}
+/* section3 */
+.section3{
+    margin-top: 20px;
+
+}
+.link1{
+    background-color: yellow;
+    width: 49%;
+    display: inline-block;
+}
+.link1 h1{
+    color: red;
+}
+/* section4 */
+.section4{
+    width: 50%;
+    height: 600px;
+    margin-top: 20px;
+}
+/* section2 */
+.sub1{
+    width: 40%;
+    margin-left: 40px;
+}
+.sub2{
+    width: 40%;
+    margin-left: 42px;
+}
+.sub3{
+    width: 40%;
+    margin-left: 72px;
+}
+.sub4{
+    width: 40%;
+    margin-left: 62px;
+}
+.sub5{
+    width: 40%;
+    margin-left: 70px;
+}
+.sub6{
+    width: 40%;
+    margin-left: 54px;
+}
+.sub7{
+     margin-left: 33px;
+}
+.sub8{
+    margin-left: 46px;
+}
