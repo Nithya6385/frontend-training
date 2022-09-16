@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header nav .first{
+    text-align: center;
+}
+.first li{
+    display: inline-block;
+    color: white;
+    padding-top:48px;
+    padding-bottom: 49px;
+    padding-right: 44px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 32px;
+}
+li:last-child{
+    padding: 0;
+}
+nav{
+    background-color: #333333;
+}
+header img{
+    width: 218px;
+    height: 146px;
+}
+header{
+    background-color: aliceblue;
+    position: relative;
+}
+.hdiv div{
+    display: inline-block;
+    position: absolute;
+    right: 23px;
+    bottom: 20px;
+}
