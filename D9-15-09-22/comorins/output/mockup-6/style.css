@@ -55,17 +55,19 @@ header img{
 }
 .sd1child1{
     display: inline-block;
-    width: 32%;
+    width: 29%;
+    padding: 35px;
     
 }
 .sdiv1 {
-    padding-left: 63px;
+    background: #F3F2EE;
 }
-.sd1child1 img{
-    width: 369px;
-    height: 278px;
-    padding:10px;
+.sd1child1 .child{
     border: 1px solid #6F6C6C;
+    padding: 10px;
+}
+.sd1child1 .child img{
+    width: 100%;
 }
 .sd1child1 p{
     display: inline-block;
@@ -79,7 +81,7 @@ header img{
     color: #000000;
 }
 .sd1child1 h3{
-    padding: 10px;
+    padding: 5px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -298,14 +300,11 @@ footer{
 footer .fp1{
     display: inline-block;
     font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 21px;
-line-height: 195.19%;
-/* identical to box height, or 41px */
-
-
-color: #D7E8B9;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 195.19%;
+    color: #D7E8B9;
 
 
 }

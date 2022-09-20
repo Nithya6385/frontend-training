@@ -1,0 +1,31 @@
+@media(min-width:575px){
+    .child .child1{
+        background-color: red;
+        padding: 30px;
+        border: 1px solid black;
+    }
+}
+@media(min-width:757px){
+    .child .child1{
+        background-color:green;
+        width: 49%;
+        height: 200px;
+        display: inline-block;
+        border: 1px solid black;
+        padding: 0;
+    }
+}
+@media(min-width:1200px){
+    .child .child1{
+        background-color:orange;
+        width: 24%;
+        height: 200px;
+        display: inline-block;
+        border: 1px solid black;
+        margin: 0;
+        padding: 0;
+    }
+}
+.child1{
+    background-color: black;
+}
