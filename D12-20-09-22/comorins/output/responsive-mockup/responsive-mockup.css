@@ -105,23 +105,6 @@
    line-height: 34px;
    color: #FFFFFF;
  }
- .sub5{
-   display: table-cell;
-   vertical-align: middle;
-   padding: 70px 150px 70px 0;
- }
- .sub5 input{
-   background: #FFFFFF;
-   border: 1px solid #FFFFFF;
-   border-radius: 10px;
-   font-family: 'Helvetica';
-   font-style: normal;
-   font-weight: 400;
-   font-size: 20px;
-   line-height: 23px;
-   color: #494D56;
-   padding: 17px 150px 18px 24px;
- }
  .secdiv1{
    width: 90%;
    margin: 0 auto;
@@ -154,7 +137,7 @@
    color: #FFFFFF;
    margin-left: 0;
 }
-.secdiv1 ul li:nth-child(5){
+.secdiv1 ul li:nth-child(4){
    border: 1px solid #494D56;
    border-radius: 10px;
    float: right;
@@ -245,28 +228,6 @@ font-family: 'Inter';
 font-style: normal;
 color: #FFFFFF;
 }
-.button{
-background: #EC483C;
-border-radius: 0px 5px 5px 0px;
-position: absolute;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 24px;
-color: #FFFFFF;
-}
-input{
-background: #494D56;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-color:#FFFFFF ;
-border: 1px solid #FFFFFF;
-border-radius: 5px;
-}
 footer h4{
   font-family: 'Inter';
   font-style: normal;
@@ -281,20 +242,14 @@ footer h4{
 }
 .last{
 background: #3A3E47;
-
 }
 .last .last1 li{
 display: table-cell;
 column-count: unset;
 text-align:right;
-
-
 }
 .last .last1{
 display: table;
 padding: 10px;
-
 }
-
-
 }
