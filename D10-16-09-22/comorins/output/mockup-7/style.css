@@ -16,7 +16,8 @@ nav ul li:first-child{
     color: #EC483C
 }
 nav ul li:last-child{
-    background-image:url("Rectangle 263.png");
+    background: #EC483C;
+    border-radius: 10px;
     padding: 12px 20px;
     font-family: 'Inter';
     font-style: normal;
@@ -247,6 +248,7 @@ footer ul li{
     font-size: 14px;
     line-height: 24px;
     align-items: center;
+    padding: 15px;
 }
 footer ul{
     column-count: 3;
@@ -259,18 +261,60 @@ footer{
     display: inline-block;
     width: 30%;
 }
+.fdiv1 img{
+    padding-top: 100px;
+    padding-left: 79px;
+    padding-bottom: 100px;
+}
 .fdiv2{
     display: inline-block;
+    vertical-align: top;
     width: 30%;
+    padding-top: 75px;
+    padding-bottom: 100px;
 }
+.fdiv2 h4{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 154.4%;
+    color: #FFFFFF;
+    background: #EC483C;
+    border-radius: 10px;
+    display: inline;
+    padding: 10px;
+}   
 .fdiv3{
     display: inline-block;
+    vertical-align: top;
     width: 30%;
     font-family: 'Inter';
     font-style: normal;
     color: #FFFFFF;
+    padding-top: 60px;
+    padding-left: 100px;
 }
-button{
+.fdiv3 p{
+    padding-top: 30px;
+}
+.demo{
+    padding-top: 25px;
+}
+input{
+    background: #494D56;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color:#FFFFFF ;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;  
+}
+.input{
     background: #EC483C;
     border-radius: 0px 5px 5px 0px;
     position: absolute;
@@ -281,17 +325,28 @@ button{
     line-height: 24px;
     color: #FFFFFF;
 }
-input{
-    background: #494D56;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color:#FFFFFF ;
+.button{
+    padding-top: 35px;
 }
-form{
-    border: 1px solid #FFFFFF;
+.inimg{
+    padding-top: 20px;
+}
+.inimg img{
+    background: #5D626F;
     border-radius: 5px;
-
+    padding: 10px;
+}
+.nav{
+    background: #3A3E47;
+    padding-left: 79px;
+}
+.nav ul li{
+    column-count: unset;
+    padding-left: 20px;
+}
+.nav ul li:nth-child(2){
+    padding-left: 680px;
+}
+.nav ul{
+    column-count: unset;
 }

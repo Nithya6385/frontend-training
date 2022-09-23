@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@media(min-width:1200px){
+    .hnav{
+        background: #333333;
+    }
+    .hnav li{
+        padding: 48px 7px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 32px;
+    }
+    .hnav li a{
+        color: #FFFEFE;
+    }
+    .karkaimg{
+        width: 218px;
+        height: 146px;
+    }
+    .nbdiv p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: #000000;
+    }
+    .hnb{
+        padding:20px;
+    }
+    .section{
+        background: #F3F2EE;
+        margin: 0;
+    }
+    .secdiv{
+        background: #F3F2EE;
+    }
+    .imgh2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 38px;
+        line-height: 45px;
+        color: #343434;
+        padding: 20px 0;
+    }
+    .imgp{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 153.19%;
+    color: #000000;
+    padding: 10px 0;
+    }
+    .imgh3{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 153.19%;
+    color: #6D9D34;
+    }
+    .imgimg{
+        border: 1px solid #6F6C6C;
+        padding: 10px;
+    }
+    .noteimg{
+        padding-left: 55px;
+    }
+    .img4{
+        padding: 17px 20px 17px 20px;
+        border: 1px solid #333333;
+        
+    }
+    .rightpara{
+        width:68%;
+        padding-top: 34px;
+        padding-bottom: 23px;
+        float: right;
+    }
+    .para51{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 153.19%;
+        color: #8F8F8F;
+        padding-left: 20px;
+        padding-bottom: 23px;
+    }
+    .para5{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 118.19%;
+        color: #8F8F8F;
+        float: right;
+        padding-left: 20px;
+        padding-bottom: 10px;   
+    }
+    
+    .para6{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 153.19%;
+        color: #8F8F8F;
+        padding-left: 34px;
+        padding-top: 42px;
+        padding-bottom: 89px;
+    }                                
+}
