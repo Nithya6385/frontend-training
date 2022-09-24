@@ -43,7 +43,7 @@
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 32px;
         line-height: 40px;
         color: #343434;
         padding: 20px 0;
@@ -179,7 +179,7 @@
     }
     .fdc2 p{
         padding-top: 20px;
-        padding-bottom: 45px;
+        padding-bottom: 20px;
         margin: 0;
     }
     
@@ -207,7 +207,6 @@
     line-height: 119.69%;
     color: #FFFFFF;
     margin: 0;
-    padding: 10px 0;
     }
     .fchild2 img{
         padding: 10px 5px;
@@ -224,17 +223,17 @@
         line-height: 195%;
         color: #D7E8B9;
     } 
-}      
-@media(min-width:991px){
+} 
+@media(min-width:767px){
     .hnav{
         background: #333333;
     }
     .hnav li{
-        padding: 42px 7px;
+        padding: 30px 7px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 14px;
         line-height: 32px;
     }
     .hnav li a{
@@ -253,7 +252,7 @@
         color: #000000;
     }
     .hnb{
-        padding:20px;
+        padding:10px;
     }
     .section{
         background: #F3F2EE;
@@ -269,7 +268,7 @@
         font-size: 29px;
         line-height: 45px;
         color: #343434;
-        padding: 20px 0;
+        padding: 10px 0;
     }
     .imgp{
         font-family: 'Roboto';
@@ -278,7 +277,7 @@
     font-size: 15px;
     line-height: 153.19%;
     color: #000000;
-    padding: 10px 0;
+    padding: 5px 0;
     }
     .imgh3{
         font-family: 'Roboto';
@@ -290,15 +289,15 @@
     }
     .imgimg{
         border: 1px solid #6F6C6C;
-        padding: 10px;
+        padding: 5px;
     }
     .img4{
         border: 1px solid #6F6C6C; 
-        padding: 10px; 
+        padding: 5px; 
         width: 100%;
     }
     .rightdiv1{
-        padding:75px 0;
+        padding:55px 0;
     }
     .section2{
         padding: 50px;
@@ -342,7 +341,8 @@
     .book{
         border-bottom: 1px solid #949393;
         transform: rotate(0.11deg);
-        padding: 20px;
+        padding:0;
+        padding-top: 10px;
     }   
     .book h4{
         font-family: 'Roboto';
@@ -396,12 +396,14 @@
         padding: 5px;
         padding-top: 10px;
     }
-    .fdc2{
-        padding-top: 10px;
-    }
     .fdc2 p{
-        padding-top: 20px;
+        padding-top: 25px;
+        padding-bottom: 20px;
         margin: 0;
+    }
+    .fdc2{
+        padding-top:0;
+        padding-left:0;
     }
     
     .fdch11{
@@ -428,7 +430,238 @@
     line-height: 119.69%;
     color: #FFFFFF;
     margin: 0;
-    padding: 10px 0;
+    }
+    .main1 img{
+        width: 100px;
+        height: 150px;
+    }
+    .fchild2 img{
+        padding: 10px 5px;
+    }
+    .flast{
+        background: #777777;
+        padding: 10px;
+    }
+    .flast p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 195.19%;
+        color: #D7E8B9;
+        padding:0 10px;
+    } 
+}           
+@media(min-width:991px){
+    .hnav{
+        background: #333333;
+    }
+    .hnav li{
+        padding: 42px 7px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .hnav li a{
+        color: #FFFEFE;
+    }
+    .karkaimg{
+        width: 218px;
+        height: 146px;
+    }
+    .nbdiv p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 26px;
+        line-height: 30px;
+        color: #000000;
+    }
+    .hnb{
+        padding:10px;
+    }
+    .section{
+        background: #F3F2EE;
+        margin: 0;
+    }
+    .secdiv{
+        background: #F3F2EE;
+    }
+    .imgh2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 29px;
+        line-height: 45px;
+        color: #343434;
+        padding: 10px 0;
+    }
+    .imgp{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 153.19%;
+    color: #000000;
+    padding: 5px 0;
+    }
+    .imgh3{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 153.19%;
+    color: #6D9D34;
+    }
+    .imgimg{
+        border: 1px solid #6F6C6C;
+        padding: 5px;
+    }
+    .img4{
+        border: 1px solid #6F6C6C; 
+        padding: 5px; 
+        width: 100%;
+    }
+    .rightdiv1{
+        padding:55px 0;
+    }
+    .section2{
+        padding: 50px;
+    }
+    .rightdiv2{
+        padding: 10px;
+    }
+    .head3{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 153.19%;
+    color: #8F8F8F;
+    border-bottom: 1px solid #8F8F8F;
+    }
+    .para51{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 153.19%;
+        color: #8F8F8F;
+    }
+    .para5{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 153.19%;
+        color: #8F8F8F;
+    }
+    .para6{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 153.19%;
+        color: #8F8F8F;
+    }
+    .book{
+        border-bottom: 1px solid #949393;
+        transform: rotate(0.11deg);
+        padding:0;
+        padding-top: 10px;
+    }   
+    .book h4{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 153.19%;
+        color: #6D9D34;
+        text-align: right;
+    }
+    .fchild1{
+        padding: 20px;
+    }
+    .sub0{
+        clear: both;
+    }
+    .fchild2{
+        padding: 20px;
+    }
+    .fchild3{
+        padding: 20px;
+    }
+    .fchild3 ul{
+        list-style: none;
+    }
+    .fchild3 li{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 195.19%;
+    color: #FFFFFF;
+    }
+    .footer1{
+        background: #333333;
+    }
+    .footer1 h2{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 153.19%;
+        color: #B1B1B1;
+        border-bottom: 2px solid #F0F0F0;
+    }
+    .fdc1{
+        padding-top: 40px;
+    }
+    .fdc1 img{
+        border: 1px solid #C2C2c2;
+        padding: 5px;
+        padding-top: 10px;
+    }
+    .fdc2 p{
+        padding-top: 25px;
+        padding-bottom: 20px;
+        margin: 0;
+    }
+    .fdc2{
+        padding-top:0;
+        padding-left:0;
+    }
+    
+    .fdch11{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 169.19%;
+    color: #FFFFFF;
+    }
+    .fdch12{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 109.19%;
+    color: #FFFFFF;
+    }
+    .fdch13{
+        font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 119.69%;
+    color: #FFFFFF;
+    margin: 0;
+    }
+    .main1 img{
+        width: 100px;
+        height: 150px;
     }
     .fchild2 img{
         padding: 10px 5px;
@@ -446,7 +679,8 @@
         color: #D7E8B9;
         padding:0 10px;
     }       
-}@media(min-width:1200px){
+}
+@media(min-width:1200px){
     .hnav{
         background: #333333;
     }
@@ -617,19 +851,18 @@
         padding: 5px;
         padding-top: 10px;
     }
-    .fdc2{
-        padding-top: 10px;
-    }
     .fdc2 p{
-        padding-top: 20px;
         margin: 0;
     }
-    
+    .fdc2{
+        padding-top: 0;
+        padding-left: 0;
+    }
     .fdch11{
         font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 169.19%;
     color: #FFFFFF;
     }
@@ -649,7 +882,6 @@
     line-height: 119.69%;
     color: #FFFFFF;
     margin: 0;
-    padding: 10px 0;
     }
     .fchild2 img{
         padding: 10px 5px;
