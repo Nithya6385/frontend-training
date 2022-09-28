@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}    
+@media(min-width:1200px){
+    /* nav start here*/
+    nav{
+        padding-top: 50px;
+    }
+    .menu1 li a{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #1E1F4B;
+        padding-top: 30px;
+    }
+    .menu1 li:last-child{
+        padding-top: 30px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+        border: 1px solid #706FE5;
+        background-color: #706FE5;
+        border-radius: 12px;
+    }    /* nav end here*/
+}

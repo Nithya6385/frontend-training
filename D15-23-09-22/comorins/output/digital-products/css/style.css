@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}    
+@media(min-width:1200px){
+    /* nav start here*/
+    nav{
+        padding-top: 50px;
+    }
+    .menu1 li a{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #1E1F4B;
+        padding-top: 30px;
+    }
+    .menu1 li:last-child{
+        padding-top: 30px;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }    /* nav end here*/
+    /*banner start here*/
+    .banner{
+        padding-top: 207px;
+        background: #FFFFFF;
+        padding-left: 90px;
+    }
+    .bannerh1{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 58px;
+        line-height: 110px;
+        letter-spacing: 0.2px;
+        color: #1E1F4B;
+    }
+    .bannerh12{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 100px;
+        letter-spacing: 0.2px;
+        color: #706FE5;
+        border: 8px solid #706FE5;
+    }
+    .bannerpara{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 36px;
+        color: #2E3E5C;
+        mix-blend-mode: normal;
+        opacity: 0.8;
+    }    /* banner end here*/
+         /* section start here*/
+    .imghead{
+        text-align: center;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.2px;
+        text-transform: capitalize;
+        color: #1E1F4B;
+        padding-top: 60px;
+    }
+    .logoimg img{
+        padding: 50px;
+    }
+    .watch{
+        padding-top: 60px;
+    }
+    .watchbox{
+        padding: 100px 40px;
+    }
+    .watchbox .head{
+        font-family: 'SF UI Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.02em;
+        color: #1E1F4B;
+        padding-top: 10px;
+    }
+
+    .watchbox span{
+        font-family: 'SF UI Text';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.02em;
+        color: #3972FE;
+    }
+    .applewatch{
+        background: #F4F4FD;
+        border-radius: 32px;
+        padding: 23px 48px;
+    }
+    .applewatch1{
+        background: #F4F4FD;
+        border-radius: 32px;
+        padding: 27px 61px;
+    }
+    .navigation{
+        background: rgba(57, 114, 254, 0.1);
+        border-radius: 8px;
+        width: 150px;
+        padding: 5px;
+    }
+    .watch h4{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        letter-spacing: 0.5px;
+        color: #3972FE;
+        text-align: center;
+    }
+    
+    .cardpara{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 46px;
+        color: #78847D;
+    }
+    .cardimg{
+        padding-top: 159px;
+    }
+    /* section end here*/
+    /*footer start here*/
+    footer{
+        background: #2E3E5C;
+        margin-top: 224px;
+    }
+    .fimg{
+        border-bottom: 2px solid #EAEEF3;
+        padding-top: 58px;
+        padding-bottom: 53px;
+    }
+    .footerh5{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+        padding-top: 40px;
+    }
+    .footerlist li{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+        padding-right: 70px;
+    }
+    .footerlist li:last-child{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
+        text-align: center;
+        color: #FFFFFF;
+        background: #706FE5;
+        border-radius: 12px;
+        padding: 5px;
+        padding-right: 0;
+    }
+    footer p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        mix-blend-mode: normal;
+        padding: 50px 0;
+    }
+    
+}
