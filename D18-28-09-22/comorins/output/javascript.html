@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+        let Resume = {
+            Name: "Nithya",
+            Education:[
+                { Study_name: "10th",
+                  Institute: "SMRV Hr. Sec. School",
+                  Mark:443,
+                  Percentage:84,
+                  Year_of_passing:2015,
+                },
+                { Study_name: "12th",
+                  Institute: "KDVP Govt. Hr. Sec. School",
+                  Mark:1008,
+                  Percentage:86,
+                  Year_of_passing:2017,
+                },
+                { Study_name: "B.Sc. Mathematics",
+                  Institute: "S.T. Hindu College",
+                  CGPA:8.7,
+                  Mark:450,
+                  Percentage:87,
+                  Year_of_passing:2020,
+                },
+                { Study_name: "M.Sc. Mathematics",
+                  Institute: "S.T. Hindu College",
+                  CGPA:9.3,
+                  Mark:450,
+                  Percentage:93,
+                  Year_of_passing:2022,
+                }
+            ],
+            Personal_details:{
+                email:"nithyasundar9103@gmail.com",
+                phone: 6385494716,
+                Address:{
+                    door_number: 9/25,
+                    street: "Vishnupuram",
+                    Village: "Erachakulam",
+                    Pincode:629902,
+                    Post:"Erachakulam",
+                },
+                family_details:{
+                    father_name: "Sundar",
+                    mother_name: "Lakshmi",
+                    Sister_name:"Suja",
+                },
+                DOB:21/11/1999,
+                gender:"female",
+                language_known:["tamil","english"]
+            },
+            skills:"type writting",
+            hobbies:["cooking","painting","drawing"]
+        }
+        for(let i=0; i<Resume.Education.length; i++){
+            console.log(Resume.Education[i].Institute);
+        }
+        let total=0;
+        for(let i=0; i<Resume.Education.length; i++){
+            let result=Resume.Education[i].Percentage;
+            total=result+total;
+        }
+        console.log(total/Resume.Education.length)
+        let count=0;
+        total=0
+        for(let i=0; i<Resume.Education.length; i++){
+            if(Resume.Education[i].Study_name!="10th"){
+                total=total+Resume.Education[i].Percentage;
+                count++;
+            }
+        }
+        console.log(total/count);
+        
+
+    </script>
+
+</body>
+</html>
