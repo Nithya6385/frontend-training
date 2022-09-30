@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        let list=[[5,6],[7,8],[9,4],[4,7],[2,1]];
+        function printEven(arr) {
+            for(i=0; i<list.length; i++){
+                for(j=0; j<list[0].length; j++){
+                    if(list[i][j]%2==0){
+                        console.log(list[i][j]);
+                    }
+                }
+            }  
+        }
+        printEven(list);
+    </script>
+</body>
+</html>
