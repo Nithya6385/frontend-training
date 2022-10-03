@@ -8,11 +8,24 @@
 </head>
 <body>
    <h1> Write a JS code to delete all occurrence of element in given array</h1>
-<p>Function `deleteElement()` deletes all the occurrence of element from the
-given array.</p>
+    <p>Function `deleteElement()` deletes all the occurrence of element from the given array.</p>
 
 
 
+    <script>
+        let  list= [3, 97, 32, 6, 97, 2, 9,32, 1, 32, 97, 97, 6, 5];
+        function deleteElement(list,item){
+            for(let i=0; i<list.length; i++){
+                if(list[i] == item) {
+                list.splice(i,1);
+                }
+            }
+            return list;
+        }
+        list= deleteElement(list,32);
+        console.log(list);
 
+    </script>
+        
 </body>
 </html>

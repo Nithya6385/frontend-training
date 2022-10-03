@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>12. Write a JS code to find the no of digits in a number</h1>
+    <p>Function digitCount() to returns the number of digits in a given number using while loop</p>
+
+
+    <script>
+        
+        function digitCount(n) {
+            let count = 0;
+            if (n >= 1) ++count;
+            while (n / 10 >= 1) {
+                n /= 10;++count;
+            }
+            return count;
+        }
+        console.log(digitCount(12112));
+        console.log(digitCount(457));
+        console.log(digitCount(11.22));
+    </script>
+</body>
+</html>
