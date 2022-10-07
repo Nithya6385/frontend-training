@@ -134,8 +134,12 @@
     <div>
         <div id="obj-data"></div>
     </div>
+    <ol id="list">
+
+    </ol>
 
     <script>
+        
         let Resume={
             name:"Nithya",
             email:"nithyasundar9103@gmail.com ",
@@ -218,7 +222,27 @@
         }
         function display(){
             document.getElementById("obj-data").innerHTML=JSON.stringify(resume);
+            //localStorage.setItem("obj-data",JSON.stringify([resume]));
+            if(!localStorage.getItem("data")){
+                localStorage.setItem("data",JSON.stringify([]));
+            }
+        
+            let list_1=JSON.parse(localStorage.getItem("data"));
+            list_1.push(resume)
+
+            localStorage.setItem("data",JSON.stringify(list_1));
+        
         }
+        namedisplay();
+        function namedisplay() {
+            let ele=" ";
+            let local_list= JSON.parse(localStorage.getItem("data"));
+            for (let i = 0; i < local_list.length; i++) {
+                ele=ele+"<li> <a href='view.html?name="+local_list[i].name +"'target='_blank'>"+local_list[i].name+"</a></li>";  
+            }
+            document.getElementById("list").innerHTML=ele;
+        }
+
     </script>
 </body>
 </html>
