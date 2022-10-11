@@ -8,12 +8,14 @@
 </head>
 <body>
     <form>
-        <label for="">Name</label>
-        <input id="name" onkeyup="addDetails('name',this.value)"/><br><br>
+        <label>Name</label>
+        <input onkeyup="addDetails('name',this.value)"/><br><br>
         <label>Email</label>
-        <input id="email" onkeyup="addDetails('email',this.value)"/><br><br>
+        <input onkeyup="addDetails('email',this.value)"/><br><br>
         <label>Phone</label>
         <input  onkeyup="addDetails('phone',this.value)"/><br><br>
+        <label>Role</label>
+        <input  onkeyup="addDetails('role',this.value)"/><br><br>
         <label>Objective</label>
         <input placeholder="text your objective" onkeyup="addDetails('objective',this.value)"/><br><br>
         <label>Skills</label>
@@ -31,25 +33,25 @@
                 <th>Percentage</th>
             </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,0,'course')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'year')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'institute')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'percentage')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'course_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'year_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'institute_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'percentage_1')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,1,'course')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'year')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'institute')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'percentage')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'course_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'year_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'institute_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'percentage_1')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,2,'course')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'year')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'institute')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'percentage')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'course_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'year_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'institute_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'percentage_1')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,3,'course')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,3,'course_1')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'year')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'institute')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'percentage')"/></td>
@@ -228,7 +230,7 @@
             }
         
             let list_1=JSON.parse(localStorage.getItem("data"));
-            list_1.push(resume)
+            list_1.push(resume);
 
             localStorage.setItem("data",JSON.stringify(list_1));
         
