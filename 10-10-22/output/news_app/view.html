@@ -26,14 +26,14 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Go!</button>
         </form>
       </nav>
-    <ol id="idlist">
+    <!--<ol >
 
-    </ol>
+    </ol>-->
     <div class="card-deck container-fluid">
         <div class="card">
           <img src="..." class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title" id="idlist">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
@@ -41,7 +41,7 @@
         <div class="card">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title" id="idlist2">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
@@ -49,7 +49,7 @@
           <div class="card">
             <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title" id="idlist3">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
@@ -61,5 +61,13 @@
 
 
     <script src="./js/script.js"></script>
+    <script>
+      let newspaper= JSON.parse(localStorage.getItem("newspaper"));
+        const queryString= window.location.search;
+        const urlParams= new URLSearchParams(queryString);
+        const product= urlParams.get('title');
+
+
+    </script>
 </body>
 </html>

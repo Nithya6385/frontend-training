@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.place{
+    border-left: 2px solid blue;
+}
+/*img{
+    position: relative;
+}
+h5{
+    position: absolute;
+    left: 10px;
+    bottom: 50px;
+    margin-left: 10px;
+    
+}*/
