@@ -19,7 +19,7 @@
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Go!</button>
           </form>
       </nav>
-      <nav class="navbar navbar-expand-lg bg-info second-navbar">
+      <nav class="navbar navbar-expand-lg bg-primary second-navbar">
         <a class="navbar-brand text-white" href="index.html">NEWS</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,34 +27,22 @@
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link text-white" href="#">Travel</a>
-            <a class="nav-item nav-link text-white" href="#">Tv</a>
-            <a class="nav-item nav-link text-white" href="#">Weather</a>
-            <a class="nav-item nav-link text-white" href="sports.html">Sports</a>
-            <a class="nav-item nav-link text-white" href="#">Culture</a>
-            <a class="nav-item nav-link text-white" href="#">Food</a>
+            <a class="nav-item nav-link text-white" href="war.html">War in Ukraine</a>
+            <a class="nav-item nav-link text-white" href="art.html">Entertainment & Art</a>
+            <a class="nav-item nav-link text-white" href="weather.html">Weather</a>
+            <a class="nav-item nav-link text-white" href="sports.html" >Sports</a>
+            <a class="nav-item nav-link text-white" href="business.html">Business</a>
             
           </div>
         </div>
       </nav>
       <!--nav bar end-->
-      <section class="container">
-        <div class=" pt-5">
-          <div class="">
-            <h1 id="title" class="pt-5 pb-3 view-title"></h1>
-            <p id="date"></p>
-            <img src="" id="image" alt="" class="view-image pt-3 pb-3"/>
-            <p id="country" class="place"></p>
-            <h2 id="short_content"></h2>
-            <p id="content" class="pt-3 pb-3 content"></p>
-          </div>
-        </div>
-      </section>
-
-
-
       
-  
+
+<div id="entertainment" class="container" ></div>
+<!--<a href="bookmark.html"> <button class="btn-primary text-white" onclick="add()">Book Mark </button></a>-->
+      
+
     
     
     <script>
@@ -62,17 +50,34 @@
         let url_string= window.location.search;
         let urlParams = new URLSearchParams(url_string);
         let url = urlParams.get('id');
-        
-        for(let i=0 ; i<news_list.length ; i++){
-          if(url == news_list[i].id){
-            document.getElementById("image").src=news_list[i].image;
-            document.getElementById("title").innerHTML=news_list[i].title;
-            document.getElementById("country").innerHTML=news_list[i].country;
-            document.getElementById("date").innerHTML=news_list[i].date;
-            document.getElementById("short_content").innerHTML=news_list[i].short_content;
-            document.getElementById("content").innerHTML=news_list[i].content;
-         }
+
+  
+   
+    function viewNews() {
+      let ele=" ";
+    for (let i = 0; i < news_list.length; i++) {
+         if(url==news_list[i].id){
+          ele+='<div><h2 class="text-primary mt-5" >'+news_list[i].title+'</h2><p class="country">'+news_list[i].country+'</p><img src="'+news_list[i].image+'" width="100%" height="400"  ><p>'+news_list[i].date+'</p><h4 class="text-primary" >'+news_list[i].short_content+'</h4><p>'+news_list[i].content+'</p><a href="bookmark.html"> <button class="btn-primary text-white" onclick="add()">Book Mark </button></a></div>';
+          document.getElementById("entertainment").innerHTML=ele;
         }
+      }
+    }
+    viewNews();
+        
+        
+        if(!localStorage.getItem("book-marks")){
+            localStorage.setItem("book-marks",JSON.stringify([]));
+        }
+         let book_marks=JSON.parse(localStorage.getItem("book-marks"));
+        // let news_arr=JSON.parse(localStorage.getItem("newspaper"));
+        function add(){
+          for(let i=0;i<news_arr.length;i++){
+            if(url==news_arr[i].id){
+                book_marks.push(news_arr[i]);
+              }
+            }
+            localStorage.setItem("book-marks",JSON.stringify(book_marks));
+          }
     </script>
      <script src="./js/script.js"></script>
   </body>

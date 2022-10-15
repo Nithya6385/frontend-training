@@ -108,9 +108,9 @@ let news_arr=[
         id:9,
         title:"Tales of bloody Iran protest crackdown at border crossing",
         country:"Iran",
-        catagory:"",
+        catagory:"war",
         content:"Soran raises two fingers to his left temple and motions firing a gun. 'If you talk, they will put a bullet in your head,' he tells me. Around us, the Iranian mountains reach skywards. We're at a bus station in Penjwen, a town in Iraq's northern Kurdistan region that is close to the crossing post on the border with Iran.",
-        short_content:" ",
+        short_content:"Soran raises two fingers to his left temple and motions firing a gun. 'If you talk, they will put a bullet in your head,' he tells me. ",
         news_type:"national",
         author:"Oliver Slow",
         image:"https://ichef.bbci.co.uk/news/976/cpsprodpb/118C2/production/_127047817_busstation2.jpg.webp",
@@ -119,10 +119,14 @@ let news_arr=[
     {
         id:10,
         title:"Should Tomori have been sent off?",
-        country:"India",
+        country:"China",
         catagory:"sports",
-        content:"",
-        short_content:" ",
+        content:`While contact was light between two England internationals the ref deemed Tomori to have denied a clear goalscoring opportunity, sent him off and awarded The Blues a penalty much to the protest of Milan.
+
+        Amazingly, Mount, 23, insisted the sending off was the WRONG decision.
+        
+        He told Chelsea's website: "He's obviously my mate, I've known Fik for a very long time and I felt for him in that situation, I was gutted for him. I dont think it was a sending-off.`,
+        short_content:"MASON MOUNT has insisted that old Chelsea pal Fikayo Tomori SHOULD NOT have been sent off against his side in the Champions League.",
         news_type:"National",
         author:"Oliver Slow",
         image:"https://ichef.bbci.co.uk/live-experience/cps/624/cpsprodpb/vivo/live/images/2022/10/12/0f86aef5-9ef1-4a8f-bd12-3ec4925a0332.jpg",
@@ -251,12 +255,16 @@ let news_arr=[
 
 localStorage.setItem('newspaper',JSON.stringify(news_arr));
 
-let list=JSON.parse(localStorage.getItem("newspaper"));
-for(let i=0; i<list.length;i++){
-    list[i].title="<a target='_blank' href='view.html?id="+list[i].id +"'>"+list[i].title+"</a>"
-    document.getElementById("title"+i).innerHTML=list[i].title;
-    document.getElementById("image"+i).src=list[i].image;
-   // document.getElementById("short_content"+i).innerHTML=list[i].short_content;
-    
-}
+
+//let news_list=JSON.parse(localStorage.getItem("newspaper"));
+//function viewNews() {
+  //  let ele=" ";
+  //for (let i = 0; i < news_list.length; i++) {
+   //    if(url=news_list[i].id){
+    //    ele+='<div class="col-3 mt-5"><p>'+news_list[i].country+'</p><img class="image" src="'+news_list[i].image+'" width="100%"><h5 class="text-primary mt-5" ><a href="view.html?id='+news_list[i].id+'">'+news_list[i].title+'</a></h5></div>';
+      //  document.getElementById("home").innerHTML=ele;
+     // }
+    //}
+  //}
+  //viewNews();
 

@@ -5,13 +5,11 @@
 .place{
     border-left: 2px solid blue;
 }
-/*img{
-    position: relative;
+.image{
+    width: 100%;
+    height: 250px;
 }
-h5{
-    position: absolute;
-    left: 10px;
-    bottom: 50px;
-    margin-left: 10px;
-    
-}*/
+.country{
+    border-left: 2px solid rgb(39, 96, 240);
+    padding-left: 10px;
+}

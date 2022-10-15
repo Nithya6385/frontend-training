@@ -17,11 +17,11 @@
         </a>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit">Go!</button>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Go!</button>
           </form>
       </nav>
-    <nav class="navbar navbar-expand-lg bg-danger second-navbar">
-        <a class="navbar-brand text-white" href="art.html">Entertainment & Art</a>
+    <nav class="navbar navbar-expand-lg bg-secondary second-navbar">
+        <a class="navbar-brand text-white" href="sports.html">Business</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,33 +29,36 @@
         <div class="navbar-collapse justify-content-center" >
           <div class="navbar-nav">
             <a class="nav-item nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link text-white" href="sports.html">Sports</a>
-            <a class="nav-item nav-link text-white" href="war.html">war</a>
+            <a class="nav-item nav-link text-white" href="war.html">War in Ukraine</a>
+            <a class="nav-item nav-link text-white" href="art.html">Entertainment & Art</a>
             <a class="nav-item nav-link text-white" href="weather.html">Weather</a>
-            <a class="nav-item nav-link text-white" href="business.html">Business</a>
+            <a class="nav-item nav-link text-white" href="sports.html" >Sports</a>
             <a class="nav-item nav-link text-white" href="bookmark.html">Book Mark</a>
+            
           </div>
         </div>
     </nav>
-    <!--nav end here-->
-    <div class="row container-fluid" id="entertainment"></div>
+   <div class="row container-fluid " id="warlist"></div>
+   
 
 
+    
 
 <script>
-  let sports_news=JSON.parse(localStorage.getItem("newspaper"));
+    let sports_news=JSON.parse(localStorage.getItem("newspaper"));
     let ele=" ";
-    function artNews() {
-      let ele=" ";
-    for (let i = 0; i < sports_news.length; i++) {
-         if(sports_news[i].catagory=="art"){
-          ele+='<div class="col-4"><img src="'+sports_news[i].image+'" width="400" height="300"  ><h5 class="text-warning" ><a href="view.html?id='+sports_news[i].id+'">'+sports_news[i].title+'</a></h5><p>'+sports_news[i].country+'</p></div>';
-          document.getElementById("entertainment").innerHTML=ele;
+    function warNews() {
+      for (let i = 0; i < sports_news.length; i++) {
+        if(sports_news[i].catagory=="business"){
+          ele+='<div class="col-6"><img src="'+sports_news[i].image+'" width="100%" height="300"   ><h5 class="text-warning" ><a href="view.html?id='+sports_news[i].id+'">'+sports_news[i].title+'</a></h5><p>'+sports_news[i].country+'</p></div>';
+        document.getElementById("warlist").innerHTML=ele;
         }
       }
     }
-    artNews();
-</script>
-<script src="./js/script.js"></script>
+    warNews();
+
+
+  </script>
+  <script src="./js/script.js"></script> 
 </body>
 </html>

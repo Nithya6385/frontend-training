@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
+    <title>BookMark</title>
+    <!-- bootstrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css"/>
@@ -17,45 +18,55 @@
         </a>
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-danger my-2 my-sm-0" type="submit">Go!</button>
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Go!</button>
           </form>
       </nav>
-    <nav class="navbar navbar-expand-lg bg-danger second-navbar">
-        <a class="navbar-brand text-white" href="art.html">Entertainment & Art</a>
+    <nav class="navbar navbar-expand-lg bg-success second-navbar">
+        <a class="nav-item nav-link text-white" href="bookmark.html">Book Mark <span class="sr-only">(current)</span></a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
        
         <div class="navbar-collapse justify-content-center" >
           <div class="navbar-nav">
-            <a class="nav-item nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link text-white" href="index.html">Home</a>
+            <a class="navbar-brand text-white" href="art.html">Entertainment & Art</a>
             <a class="nav-item nav-link text-white" href="sports.html">Sports</a>
             <a class="nav-item nav-link text-white" href="war.html">war</a>
             <a class="nav-item nav-link text-white" href="weather.html">Weather</a>
             <a class="nav-item nav-link text-white" href="business.html">Business</a>
-            <a class="nav-item nav-link text-white" href="bookmark.html">Book Mark</a>
           </div>
         </div>
     </nav>
     <!--nav end here-->
-    <div class="row container-fluid" id="entertainment"></div>
 
+    <div class="container ">
+        
+       <div id="book" class="row"></div>
+        
+    </div>
+    
 
-
-<script>
-  let sports_news=JSON.parse(localStorage.getItem("newspaper"));
-    let ele=" ";
-    function artNews() {
-      let ele=" ";
-    for (let i = 0; i < sports_news.length; i++) {
-         if(sports_news[i].catagory=="art"){
-          ele+='<div class="col-4"><img src="'+sports_news[i].image+'" width="400" height="300"  ><h5 class="text-warning" ><a href="view.html?id='+sports_news[i].id+'">'+sports_news[i].title+'</a></h5><p>'+sports_news[i].country+'</p></div>';
-          document.getElementById("entertainment").innerHTML=ele;
+    <script>
+        function display(){
+            let bookMark=JSON.parse(localStorage.getItem("book-marks"));
+            let element=" ";
+            for(let i=0;i<bookMark.length;i++){
+            element+='<div class="card mb-3 mt-5 col-6" ><img class="mt-3" width="100%" height="250" src='+bookMark[i].image+'><div class="card-body"><h5 class="card-title "><a  class="text-success" href="view.html?id='+bookMark[i].id+' "target=_blank">'+bookMark[i].title+'</a></h5><p class="card-text"><small class="text-muted">'+bookMark[i].date+'</small></p><button onclick="remove('+i+');">DELETE</button></div></div>';
+                         
+        }  
+        document.getElementById("book").innerHTML=element;  
         }
-      }
-    }
-    artNews();
-</script>
-<script src="./js/script.js"></script>
+         display();
+        function remove(i){
+        let bookmark_1=JSON.parse(localStorage.getItem("book-marks"));
+        bookmark_1.splice(i,1);
+        localStorage.setItem("book-marks",JSON.stringify(bookmark_1));
+        display();
+        }
+
+    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
