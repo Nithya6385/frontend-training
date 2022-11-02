@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="text-center"> jQuery Ajax changes </h1>
+   <div class="container">
+   <div class="row"  id="detail"></div>
+   </div>
+    <button class="btn btn-secondary btn-lg btn-block">Show all details</button>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.ajax({
+                    url:"https://jsonplaceholder.typicode.com/posts/",
+                    success: function (data) {
+                        // console.log(data);   
+                        element=" ";
+                        for (let i = 0; i < data.length; i++) {
+                            element+='<div class="col-3"><p>'+data[i].id+'</P><h5>'+data[i].title+'</h5><p>'+data[i].body+'</p></div>';   
+                        }
+                        $("#detail").append(element);
+
+                    }
+                });
+                $("button").hide();
+            });
+        });
+    </script>
+</body>
+</html>

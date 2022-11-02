@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ajax</h1>
+    <button>Change</button><br>
+    <code id="wrapper"></code>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.ajax({
+                    url:"https://jsonplaceholder.typicode.com/posts/1",
+                    success: function (data) {
+                        console.log(data);
+                        $("#wrapper").html(JSON.stringify(data));
+                        
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
