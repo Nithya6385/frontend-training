@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
     <form>
@@ -33,25 +34,25 @@
                 <th>Percentage</th>
             </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,0,'course_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'year_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'institute_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,0,'percentage_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'course')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'year')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'institute')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,0,'percentage')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,1,'course_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'year_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'institute_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,1,'percentage_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'course')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'year')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'institute')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,1,'percentage')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,2,'course_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'year_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'institute_1')"/></td>
-            <td><input onkeyup="addDetails('education',this.value,2,'percentage_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'course')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'year')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'institute')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,2,'percentage')"/></td>
         </tr>
         <tr>
-            <td><input onkeyup="addDetails('education',this.value,3,'course_1')"/></td>
+            <td><input onkeyup="addDetails('education',this.value,3,'course')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'year')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'institute')"/></td>
             <td><input onkeyup="addDetails('education',this.value,3,'percentage')"/></td>
@@ -130,22 +131,31 @@
     <input placeholder="text declaration here" onkeyup="addDetails('declaration',this.value)"/><br><br>    
        
 </form>
-<button id="submitbtn">submit</button> 
-    
+<button id="submitbutton">submit</button> 
+<!--<button id="getbutton">Get</button> 
+<button id="deletebutton">Delete</button>-->
+<button id="getresume" >Get Resume</button> <br><br>
 
-    <div>
-        <div id="obj-data"></div>
-    </div>
-    <ol id="list">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone number</th>
+        <th scope="col">Role</th>
+        <th scope="col">Action</th>
+        <th scope="col">View</th>
+      </tr>
+    </thead>
+    <tbody id="table">
 
-    </ol>
+    </tbody>
 
+</table>
 
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-    <script type="text/javascript"></script>
-    <script>
-         let resume={
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script type="text/javascript">
+         let obj_datas={
             skills:[],
             education:[{}],
             certification:[{}],
@@ -156,48 +166,179 @@
         }
         function addDetails(key,value,index=null,indexkey=null) {
            if(index==null && indexkey==null) {
-                resume[key]=value;
+                obj_datas[key]=value;
             }else if(indexkey==null){
-                resume[key][index]=value;
+                obj_datas[key][index]=value;
             }
             else{
-                if(!resume[key][index]){
-                    resume[key][index]={}
+                if(!obj_datas[key][index]){
+                    obj_datas[key][index]={}
                 }
-                resume[key][index][indexkey]=value;
+                obj_datas[key][index][indexkey]=value;
             }
             
         }
-        //function display(){
-            //document.getElementById("obj-data").innerHTML=JSON.stringify(resume);
-           
-        // }
-        // namedisplay();
-        // function namedisplay() {
-        //     let ele=" ";
-        //     let local_list= JSON.parse(localStorage.getItem("data"));
-        //     for (let i = 0; i < local_list.length; i++) {
-        //         ele=ele+"<li> <a href='view.html?name="+local_list[i].name +"'target='_blank'>"+local_list[i].name+"</a></li>";  
-        //     }
-        //     document.getElementById("list").innerHTML=ele;
-        // }
-
+       
         $(document).ready(function () {
-            $("button").click(function () {
+            $("#submitbutton").click(function () {
                 $.ajax({
                     type:"post",
                     url:"http://karka.academy/api/action.php",
                     data:{
                         request:"create_resume",
                         user:"nithya",
-                        resume
+                        resume:obj_datas
                     },
-                    success: function (data) {
-        
+                    success: function (response) {
+                        let details=JSON.parse(response).data;
+                        console.log(details);
+                        $("#table").html(``)
+                        for (let i = 0; i < details.length; i++) {
+                            let value = JSON.parse(details[i].data)
+                            let element = `<tr><td>${i}</td>
+                                <td>${value.name}</td>
+                                <td>${value.phone}</td>
+                                <td>${value.role}</td>
+                                <td><button class='delete' value="${details[i].id}">Delete</button></td>
+                                <td><a href='view.html?id=${details[i].id}'><button class='viewresume' value="${details[i].id}">View</button></a></td></tr>`;
+                             $("#table").append(element); 
+                            
+                        }
+                    }
+                });
+            });
+            $.ajax({
+                type:"get",
+                url:"http://karka.academy/api/action.php",
+                data:{
+                    request:"get_user_resume",
+                    user:"nithya",
+                },
+                success: function (response) {
+                    let details=JSON.parse(response).data;
+                    console.log(details);
+    
+                    for (let i = 0; i < details.length; i++) {
+                        let value = JSON.parse(details[i].data)
+                        let element = `<tr><td>${i}</td>
+                            <td>${value.name}</td>
+                            <td>${value.phone}</td>
+                            <td>${value.role}</td>
+                            <td><button class='delete' value="${details[i].id}">Delete</button></td>
+                            <td><a href='view.html?id=${details[i].id}'><button class='viewresume' value="${details[i].id}">View</button></a></td></tr>`;
+                        $("#table").append(element)
+                            
+                    }
+                        
+                },
+            });
+            $("#getresume").click(function () {
+                let id_value=$(this).val()
+                $.ajax({
+                    type:"get",
+                    url:"http://karka.academy/api/action.php",
+                    data:{
+                        request:"get_resume_by_id",
+                        user:"nithya",
+                        id:id_value
+                    },
+                    success: function (response) {
+                        console.log(response);
                     }
                 });
             });
         });
+        $(document).on("click",".delete",function () {
+            let id_value=$(this).val()
+            $.ajax({
+                    type:"get",
+                    url:"http://karka.academy/api/action.php",
+                    data:{
+                        request:"delete_user_resume",
+                        user:"nithya",
+                        id:id_value
+                    },
+                    success: function (response) {
+                        let details=JSON.parse(response).data;
+                        console.log(details);
+                        $("#table").html(``)
+                        for (let i = 0; i < details.length; i++) {
+                            let value = JSON.parse(details[i].data)
+                            let element = `<tr><td>${i}</td>
+                                <td>${value.name}</td>
+                                <td>${value.phone}</td><td>${value.role}</td>
+                                <td><button class='delete' value='${details[i].id}'>Delete</button></td>
+                                <td><a href='view.html?id=${details[i].id}'><button class='viewresume' value="${details[i].id}">View</button></a></td></tr>`;
+                             $("#table").append(element); 
+                            
+                        }
+                    }
+                });
+        });
+        $(document).on("click",".viewresume",function () {
+            let id_value=$(this).val()
+            $.ajax({
+                    type:"get",
+                    url:"http://karka.academy/api/action.php",
+                    data:{
+                        request:"delete_user_resume",
+                        user:"nithya",
+                        id:id_value
+                    },
+                    success: function (response) {
+                        let details=JSON.parse(response).data;
+                        console.log(details);
+                        $("#table").html(``)
+                        for (let i = 0; i < details.length; i++) {
+                            let value = JSON.parse(details[i].data)
+                            let element = `<tr><td>${i}</td>
+                                <td>${value.name}</td>
+                                <td>${value.phone}</td><td>${value.role}</td>
+                                <td><button class='delete' value='${details[i].id}'>Delete</button></td>
+                                <td><a href='view.html?id=${details[i].id}'><button class='viewresume' value="${details[i].id}">View</button></a></td></tr>`;
+                             $("#table").append(element); 
+                            
+                        }
+                    }
+                });
+        });
+        
+          // $("#getbutton").click(function () {
+                // $.ajax({
+                //     type:"get",
+                //     url:"http://karka.academy/api/action.php",
+                //     data:{
+                //         request:"get_user_resume",
+                //         user:"nithya",
+            
+                //     },
+                //     success: function (response) {
+                //         let details=JSON.parse(response).data;
+                //         console.log(details);
+                //         for (let i = 0; i < details.length; i++) {
+                //             let value = JSON.parse(details[i].data)
+                //             let element="<tr><td>"+i+"</td><td>"+value.name+"</td><td>"+value.phone+"</td><td>"+value.role+"</td><td><button class='delete'>Delete</button></td></tr>";
+                //             $("#table").append(element);
+                            
+                //         }
+                        
+                //     },
+                // });
+            // });
+            // $("#deletebutton").click(function () {
+            //     $.ajax({
+            //         type:"get",
+            //         url:"http://karka.academy/api/action.php",
+            //         data:{
+            //             request:"delete_user_resume",
+            //             user:"nithya",
+            //             id:"868"
+            //         },
+            //         success: function (response) {
+            //             console.log(response);
+            //         }
+            //     });
+            // });
     </script>
 </body>
 </html>
